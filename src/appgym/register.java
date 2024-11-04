@@ -51,18 +51,15 @@ public class register {
         return false;
     }
    
-   public static boolean checkTonTaiEmail(String gmail) {
+    public static boolean checkTonTaiEmail(String gmail) {
         String query = "SELECT * FROM account WHERE gmail = ? ";
         try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(query)) {
             // Thiết lập các tham số cho câu truy vấn
-            
             stmt.setString(1, gmail);
-           
-           
+            
             // Thực hiện truy vấn
             ResultSet rs = stmt.executeQuery();
-
-          
+            
             if (rs.next()) {
                 return true;
             }

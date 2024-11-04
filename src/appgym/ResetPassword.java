@@ -317,6 +317,8 @@ class ResetPassword extends JFrame {
         emailAdd = txt_email.getText();
         if(emailAdd.isEmpty()){
             JOptionPane.showMessageDialog(null, "Hay nhap email cua ban!");
+        } else if (password.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Mat khau khong hop le!");
         }
         else if(password.equals(passwordcf)) {            
                 String getOtp = txtOtp.getText();

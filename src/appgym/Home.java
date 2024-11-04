@@ -373,13 +373,16 @@ class Home extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logoHome190.png"))); // NOI18N
         jPanel18.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 200, 80));
 
+        imgLogout.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        imgLogout.setForeground(new java.awt.Color(153, 204, 255));
         imgLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Exit_26px_2.png"))); // NOI18N
+        imgLogout.setText("     Logout");
         imgLogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imgLogoutMouseClicked(evt);
             }
         });
-        jPanel18.add(imgLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, -1, -1));
+        jPanel18.add(imgLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 600, 140, -1));
 
         getContentPane().add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 700));
 

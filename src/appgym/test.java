@@ -345,7 +345,11 @@ class test extends JFrame {
         String password=new String(txtPassword.getPassword());
         String passwordcf=new String (txtPassConfirmRegister.getPassword());
         emailAdd = txt_email.getText();
-        if(password.equals(passwordcf))
+        if (username.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Ten nguoi dung khong hop le!");
+        }else if (password.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Mat khau khong hop le!");
+        } else if(password.equals(passwordcf))
         {
             if (emailAdd.isEmpty()){
                 JOptionPane.showMessageDialog(null, "Hay nhap email cua ban!");
