@@ -347,10 +347,10 @@ class test extends JFrame {
         emailAdd = txt_email.getText();
         if(password.equals(passwordcf))
         {
-            if(register.checktontai(username)){
+            if (emailAdd.isEmpty()){
+                JOptionPane.showMessageDialog(null, "Hay nhap email cua ban!");
+            }else if(register.checktontai(username)){
                 JOptionPane.showMessageDialog(null, "Tai khoan da ton tai!");
-            } else if (register.checkTonTaiEmail(emailAdd)){
-                JOptionPane.showMessageDialog(null, "Email da ton tai!");
             } else {
                 String getOtp = txtOtp.getText();
                 if (getOtp.equals(Integer.toString(otp))){
@@ -423,7 +423,7 @@ class test extends JFrame {
         if(emailAdd.isEmpty()){
             JOptionPane.showMessageDialog(null, "Hay nhap email cua ban!");
         }
-        else if(register.checkTonTaiEmail(emailAdd)){
+        else if(!register.checkTonTaiEmail(emailAdd)){
             Random random = new Random();
             int min = 100000;
             int max = 999999;
@@ -434,7 +434,7 @@ class test extends JFrame {
             JOptionPane.showMessageDialog(null, "OTP sent, Please check your email!");
             btnSendCode.setEnabled(false);
         } else {
-            JOptionPane.showMessageDialog(null, "Dia chi Email khong co trong he thong!");
+            JOptionPane.showMessageDialog(null, "Email da ton tai trong he thong!");
         }
     }//GEN-LAST:event_btnSendCodeActionPerformed
 
